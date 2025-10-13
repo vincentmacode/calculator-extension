@@ -1,0 +1,59 @@
+ 
+ .grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.calculator-grid {
+    display: grid;
+    width: 360px; /* fixed width for consistent button sizes in popup */
+    grid-template-columns: repeat(4, 1fr);
+    /* first row (display) flexible, then 5 rows of buttons at 60px each */
+    grid-template-rows: minmax(80px, auto) repeat(5, 60px);
+    gap: 8px;
+    background-color: transparent;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.calculator-grid button {
+    font-family: 'DM mono', monospace;
+    font-size: 20px;
+    border: none;
+    background-color: skyblue;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+textarea {
+    grid-column: 1 / -1;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'DM mono', monospace;
+    font-size: 24px;
+    text-align: right;
+    background-color: #f7a58b;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+/* style for the last row (operators/equal), adjust selector because textarea occupies first grid cells */
+.calculator-grid button:nth-of-type(n+18) {
+    background-color: tomato;
+}
+
+button:hover, 
+.calculator-grid button:nth-child(n+18):hover {
+    background-color: #f54236;
+    color: white;
+    transition: 0.2s;
+}
