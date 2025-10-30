@@ -8,7 +8,6 @@ Files of interest
 - `styles.css` — styling
 - `script.js` — logic, keyboard handling, arithmetic evaluator
 - `manifest.json` — Chrome extension manifest (Manifest V3)
-- `icons/` — SVG icons included; you may export PNGs for the store
 
 Quick local test (Load unpacked)
 1. Open Chrome and navigate to: `chrome://extensions`.
@@ -20,4 +19,5 @@ Basic functionality to test
 - Click number/operator buttons and `=` to evaluate.
 - Keyboard: Enter evaluates, Backspace deletes last char, Escape clears. Typing digits/operators also works.
 - `C` clears, `DEL` deletes last character.
+
 
